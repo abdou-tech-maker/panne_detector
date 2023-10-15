@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:panne_detector/pages/mainScreen.dart';
 
 import '../../constantes/constantes.dart';
 import '../../widgets/appButton.dart';
@@ -122,7 +123,10 @@ class _LoginState extends State<Login> {
           height: 30,
         ),
         MyButton(
-          onPressed: () async {},
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const MainScreen()));
+          },
           text: 'Continue',
         ),
         const SizedBox(
