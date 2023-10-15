@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'login/login.dart';
+
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
@@ -44,6 +46,20 @@ class WelcomePage extends StatelessWidget {
                   letterSpacing: 4),
             )),
         Positioned(
+            top: 330,
+            left: 20,
+            right: 20,
+            height: 189,
+            child: Text(
+              'Detect,Correct,Perfect',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w400,
+                  letterSpacing: 8),
+            )),
+        Positioned(
             bottom: 100,
             left: 20,
             right: 20,
@@ -59,7 +75,11 @@ class WelcomePage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     color: Colors.black),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const Login()),
+                );
+              },
             )),
         Positioned(
             bottom: 49,
