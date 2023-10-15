@@ -60,9 +60,7 @@ class _LoginState extends State<Login> {
           _errorMsg ?? "",
           style: const TextStyle(color: Colors.red),
         ),
-        const SizedBox(
-          height: 30,
-        ),
+        const SizedBox(height: 25),
         Text(
           'Log in to your account',
           style: GoogleFonts.poppins(
